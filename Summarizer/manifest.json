@@ -3,14 +3,19 @@
   "name": "Summarizer",
   "version": "1.0",
   "description": "This extension will help you summarize an article using Gemini",
-  "permissions": [],
+  "permissions": ["activeTab", "scripting"],
   "host_permissions": [],
   "action": {
     "default_popup": "index.html"
   },
+
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
-      "js": ["scripts/index.js"]
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
     }
   ]
 }
