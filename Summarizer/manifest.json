@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Summarizer",
+  "version": "1.0",
+  "description": "This extension will help you summarize an article using Gemini",
+  "permissions": [],
+  "host_permissions": [],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/index.js"]
+    }
+  ]
+}
